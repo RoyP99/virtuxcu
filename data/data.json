@@ -1,0 +1,59 @@
+{
+	"cameras":
+	[
+		{
+			"ip": "192.168.1.12",
+			"camnr": 13,
+			"senders":
+			[
+				{ 
+					"label": "Main",
+					"request":
+					{
+						"master_enable": true,
+						"transport_params": [
+							{
+								"destination_ip": "229.29.29.26",
+								"destination_port": 29000,
+								"rtp_enabled": false
+							},
+							{
+								"destination_ip": "229.29.28.26",
+								"destination_port": 29000,
+								"rtp_enabled": false
+							}
+						]
+					}
+				}
+			],
+			"receivers":
+			[
+				{ 
+					"label": "Ext1",
+					"request":
+					{
+						"master_enable": true,
+						"transport_params": [
+							{
+								"source_ip": "0.0.0.0",
+								"multicast_ip": "239.115.1.15",
+								"destination_port": 20000,
+								"rtp_enabled": true
+							},
+							{
+								"source_ip": "0.0.0.0",
+								"multicast_ip": "239.115.2.15",
+								"destination_port": 20000,
+								"rtp_enabled": true
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"ip": "192.168.1.13",
+			"camnr": 11
+		}
+	]
+}
